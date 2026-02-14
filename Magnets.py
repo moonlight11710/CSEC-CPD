@@ -1,17 +1,14 @@
 n=int(input())
 lis=[]
-group=1
 for i in range(n):
-    row=list(input().split())
-    lis.append(row)
-
-for i in range(n-1):
-    checker=lis[i]
-    if lis[i]==lis[i+1]:
+    i=input()
+    lis.append(i)
+counter=1
+checker=lis[0]
+for i in lis:
+    if i==checker:
         continue
     else:
-        group+=1
-
-print(group)
-
-
+        counter+=1
+        checker=i
+print(counter)
