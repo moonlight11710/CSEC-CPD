@@ -1,12 +1,10 @@
-word=input()
+n=input()
 upper=0
-lower=0
-for i in word:
-    if i.lower()==i:
-        lower+=1
-    else:
+for i in n:
+    if i.islower()!=True:
         upper+=1
-if lower>=upper:
-    print(word.lower())
+
+if upper>len(n)-upper:
+    print(n.upper())
 else:
-    print(word.upper())
+    print(n.lower())
