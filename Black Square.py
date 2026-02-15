@@ -1,15 +1,6 @@
-n=list(map(int,input().split()))
-turns=list(map(int,input()))
+n=list(map(int, input().split()))
+string=input()
 calories=0
-
-for i in turns:
-    if i==1:
-        calories+=n[0]
-    elif i==2:
-        calories+=n[1]
-    elif i==3:
-        calories+=n[2]
-    elif i==4:
-        calories+=n[3]
+for i in string:
+    calories+=n[int(i)-1]
 print(calories)
-
