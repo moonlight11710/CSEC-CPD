@@ -1,6 +1,2 @@
-shoes=list(map(int,input().split()))
-amount=[]
-for i in shoes:
-    if i not in amount:
-        amount.append(i)
-print(4-len(amount))
+lis=list(map(int, input().split()))
+print(len(lis)-len(set(lis)))
