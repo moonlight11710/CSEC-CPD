@@ -1,12 +1,7 @@
-seq=input()
-instruction=input()
-position=1
-j=0
-for i in range(len(instruction)):
-    if instruction[i]==seq[j]:
+n=input()
+t=input()
+position=0
+for i in range(len(t)):
+    if t[i]==n[position]:
         position+=1
-        j+=1
-
-    else:
-        continue
-print(position)
+print(position+1)
