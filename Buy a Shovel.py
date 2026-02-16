@@ -1,5 +1,6 @@
-amount, r = map(int, input().split())
-for i in range(1, 11):
-    if amount * i % 10 == r or amount * i % 10 == 0:
-        print(i)
-        break
+k, r = map(int, input().split())
+i=1
+while (k*i)%10!=0 and (k*i)%10!=r:
+    i+=1
+print(i)
+
