@@ -1,25 +1,21 @@
-n = int(input())
-birds = list(map(int, input().split()))
-m = int(input())
-shots = []
+n=int(input())
+lis=list(map(int, input().split()))
+m=int(input())
+for i in range(m):
+    k,l=map(int, input().split())
+    if len(lis)==1:
+        lis[k-1]=0
+    elif k!=1 and k!=len(lis):
+        lis[k-2]+=l-1
+        lis[k]+=(lis[k-1]-l)
+        lis[k-1]=0
+        
+    elif k==1:
+        lis[k]+=lis[k-1]-l
+        lis[k-1]=0
+    elif k==len(lis):
+        lis[k-2]+=l-1
+        lis[k-1]=0
 
-for _ in range(m):
-    x, y = map(int, input().split())
-    shots.append((x, y)) 
-     
-def shoot_birds(n, birds, shots):
-    for x, y in shots:
-        x -= 1  
-        left, right = x - 1, x + 1
-
-        if left >= 0:
-            birds[left] += y - 1 
-        if right < n:
-            birds[right] += birds[x] - y  
-
-        birds[x] = 0
-
-    return birds
-
-for count in shoot_birds(n, birds, shots):
-    print(count)
+for i in lis:
+    print(i)
